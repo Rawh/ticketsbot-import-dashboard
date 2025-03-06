@@ -254,10 +254,10 @@
     async function loadBot() {
         const res = await axios.get(`${API_URL}/user/whitelabel/`);
         if (res.status !== 200) {
-            if (res.status === 402) {
-                window.location.replace("https://ticketsbot.cloud/premium");
-                return false;
-            }
+            // if (res.status === 402) {
+            //     window.location.replace("https://ticketsbot.cloud/premium");
+            //     return false;
+            // }
 
             if (res.status !== 404) {
                 notifyError(res.data.error);
